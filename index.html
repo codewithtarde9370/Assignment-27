@@ -20,12 +20,7 @@
             text-align: center;
             
         }
-        @media screern and (max-width:768px){
-          .title{
-            font-size:20px;
-            max-width:200px;
-          }
-        }
+       
         .container{
              display: flex;
              flex-direction: column;
@@ -42,6 +37,7 @@
             text-align: justify;
             font-size: 25px;
             font-family:Arial, Helvetica, sans-serif;
+            width: 90%;
         }  
   .btn{border-radius: 10px;
     border: 1px solid grey;
@@ -74,6 +70,19 @@
   .dark{
     background-color:  #4d4c4c;
     color: white;
+  }
+  @media screen and (max-width:700px){
+    .title{
+      font-size:20px;
+      max-width:200px;
+    }
+    .main{
+      display: flex;
+      flex-direction: column;
+    }
+    p{
+      font-size: 20px;
+    }
   }
      </style>
 </head>

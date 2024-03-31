@@ -58,14 +58,21 @@
     font-size: 20px;
     padding: 3px 5px;
   }
+  .ligth{
+
+  }
+  .dark{
+    background-color:  #4d4c4c;
+    color: white;
+  }
      </style>
 </head>
-<body>
+<body id="body">
     <div class="border">
        <div class="main">
         <h1 class="title">Permanent Executive: Bureaucracy </h1>
         <div class="btn-class"><button class="btn"><img src="./brightness.png" alt="" id="light-mode" ></button>
-         <div> <button class="click-btn" onclick=" toggle_mode('dark')">Dark</button>
+         <div> <button class="click-btn" onclick=" toggle_mode('dark')" onclick="change()">Dark</button>
           <button class="click-btn" onclick=" toggle_mode('light')">Light</button></div>
             <h3>Click to change the theme</h3></div>
        </div>
@@ -92,7 +99,8 @@
               }
     }
     function change(){
-
+const x=document.getElementsByClassName('border');
+x.className="dark";
         
     }
     

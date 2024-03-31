@@ -17,8 +17,14 @@
         .title{
            margin: 10px auto;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: brown;
             text-align: center;
+            
+        }
+        @media screern and (max-width:768px){
+          .title{
+            font-size:20px;
+            max-width:200px;
+          }
         }
         .container{
              display: flex;
@@ -30,7 +36,7 @@
              margin: 20px;
         }   
         .image{
-          width: 1200px;
+          width: 90%;
         }
         p{
             text-align: justify;
@@ -40,9 +46,7 @@
   .btn{border-radius: 10px;
     border: 1px solid grey;
   }
-  .btn:hover{
-    box-shadow: 0 0 5px 2px grey;
-  }
+  
   .btn-class{
     display: flex;
     flex-direction: column;
@@ -57,9 +61,15 @@
     color: black;
     font-size: 20px;
     padding: 3px 5px;
+    cursor: pointer;
   }
-  .ligth{
-
+  .click-btn:hover{
+    box-shadow: 0 0 5px 2px grey;
+  }
+  
+  .light{
+       background-color: white;
+       color:black;
   }
   .dark{
     background-color:  #4d4c4c;
@@ -67,13 +77,13 @@
   }
      </style>
 </head>
-<body id="body">
+<body id="body" class="light">
     <div class="border">
        <div class="main">
         <h1 class="title">Permanent Executive: Bureaucracy </h1>
         <div class="btn-class"><button class="btn"><img src="./brightness.png" alt="" id="light-mode" ></button>
-         <div> <button class="click-btn" onclick=" toggle_mode('dark')" onclick="change()">Dark</button>
-          <button class="click-btn" onclick=" toggle_mode('light')">Light</button></div>
+         <div> <button class="click-btn" onclick="dark()" >Dark</button>
+          <button class="click-btn" onclick=" light()">Light</button></div>
             <h3>Click to change the theme</h3></div>
        </div>
        
@@ -87,23 +97,36 @@
     </div>
 <script>
 
-    function toggle_mode(state){
+    /*function toggle_mode(state){
               const mode=document.getElementById('light-mode');
               mode.src='sun.png';
+              const x=document.getElementsById('body');
+              x.classList.add="light";
               if(state=='light'){
                 mode.src='brightness.png'
-
+                x.classList.add="light";
               }
               else{
                 mode.src='sun.png'
+                x.classList.add="dark";
               }
+    }*/
+ 
+    function light(){
+            const theme_btn=document.getElementById("light-mode");
+            theme_btn.src='brightness.png';
+
+            const change_theme=document.getElementById("body");
+            change_theme.className='light';
+          
     }
-    function change(){
-const x=document.getElementsByClassName('border');
-x.className="dark";
-        
-    }
-    
+    function dark(){
+      const theme_btn=document.getElementById("light-mode");
+      theme_btn.src='sun.png';
+
+      const change_theme=document.getElementById("body");
+      change_theme.className='dark';
+}
 </script>
 
 </body>

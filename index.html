@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 27</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-between;
+            align-items: center;
+        }
+        #light-mode,#dark-mode{
+            height: 40px;
+                      }
+        .title{
+           margin: 10px auto;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: brown;
+            text-align: center;
+        }
+        .container{
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             margin: 20px auto;padding: 25px;
+             border: 1px solid grey;
+             margin: 20px;
+        }   
+        .image{
+          width: 1200px;
+        }
+        p{
+            text-align: justify;
+            font-size: 25px;
+            font-family:Arial, Helvetica, sans-serif;
+        }  
+  .btn{border-radius: 10px;
+    border: 1px solid grey;
+  }
+  .btn:hover{
+    box-shadow: 0 0 5px 2px grey;
+  }
+  .btn-class{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+  }
+  .btn-class .click-btn{
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 3px 5px;
+  }
+     </style>
+</head>
+<body>
+    <div class="border">
+       <div class="main">
+        <h1 class="title">Permanent Executive: Bureaucracy </h1>
+        <div class="btn-class"><button class="btn"><img src="./brightness.png" alt="" id="light-mode" ></button>
+         <div> <button class="click-btn" onclick=" toggle_mode('dark')">Dark</button>
+          <button class="click-btn" onclick=" toggle_mode('light')">Light</button></div>
+            <h3>Click to change the theme</h3></div>
+       </div>
+       
+       <div class="container">
+        <h2 class="sub-title">Who implements the decision of ministry?</h2>
+        <img src="./img1.jpg" alt="Indian Bureaucracy" class="image">
+        <p class="para">The Indian Bureaucracy today is an enormously complex system. It consist of the All-India services, state services, employees of the local governments, technical and managerial staff running public sector undertakings. Union Public Service Commision has been entrusted with task of conducting the process of recruitment of the Civil servants for the government of India. The members of the civil services are selected for the fixed term. Their removal or the suspension is subject to a thorough enquiry made by the judge of the Supreme Court. The persons selected by the UPSC for Indian Administrative Service and Indian Police Service constitute the backbone of the higher level bureaucracy in the States. Collector of the district is the most important officer of the Government at District level.
+        </p>
+       
+       </div>
+    </div>
+<script>
+
+    function toggle_mode(state){
+              const mode=document.getElementById('light-mode');
+              mode.src='sun.png';
+              if(state=='light'){
+                mode.src='brightness.png'
+
+              }
+              else{
+                mode.src='sun.png'
+              }
+    }
+    function change(){
+
+        
+    }
+    
+</script>
+
+</body>
+</html>
